@@ -177,7 +177,14 @@ function Summit() {
 
           {selectedFile && (
             <button onClick={handleUpload} className="upload-button" disabled={uploading}>
-              {uploading ? 'Uploading...' : 'Upload File'}
+              {uploading ? (
+                <>
+                  <span className="spinner"></span>
+                  Uploading...
+                </>
+              ) : (
+                'Upload File'
+              )}
             </button>
           )}
         </div>
