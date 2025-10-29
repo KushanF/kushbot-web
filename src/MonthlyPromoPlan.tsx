@@ -121,7 +121,7 @@ function MonthlyPromoPlan() {
         const requiredTabs: string[] = [];
 
         if (validateTabs(sheetNames, requiredTabs)) {
-          console.log('Validation passed. Uploading to S3...');
+          console.log('Validation passed. Uploading to S3....');
           uploadToS3();
         } else {
           setError(`Invalid file format!\n\nRequired tabs: ${requiredTabs.join(', ')}\n\nFound tabs: ${sheetNames.join(', ')}`);
