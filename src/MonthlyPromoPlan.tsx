@@ -45,7 +45,7 @@ function MonthlyPromoPlan() {
 
     try {
       // Step 1: Get presigned URL from Lambda
-      const lambdaResponse = await fetch('https://odsrpfkhn5.execute-api.ap-southeast-2.amazonaws.com/get-upload-url', {
+      const lambdaResponse = await fetch('https://kekr5g0cbj.execute-api.ap-southeast-2.amazonaws.com//get-upload-url', {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -118,7 +118,7 @@ function MonthlyPromoPlan() {
         }
 
         // Define required tab names for Monthly Promo Plan file
-        const requiredTabs = ['Sheet1'];
+        const requiredTabs: string[] = [];
 
         if (validateTabs(sheetNames, requiredTabs)) {
           console.log('Validation passed. Uploading to S3...');
