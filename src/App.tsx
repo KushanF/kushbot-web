@@ -15,7 +15,7 @@ function App() {
         <p>Please select what you want to do from the list below.</p>
         <nav className="navbar">
           <ul className="menu">
-            <li className="menu-item"><a href="https://tipple-7eleven.s3.ap-southeast-2.amazonaws.com/index.html" target="_blank" rel="noopener noreferrer">🍩 Upload Range Refresh Files</a></li>
+            <li className="menu-item"><a onClick={() => navigate('/range-refresh')}>🍩 Upload Range Refresh Files</a></li>
             <li className="menu-item"><a onClick={() => navigate('/bonus-buy')}>📁 Upload Monthly Bonus Buy File</a></li>
             <li className="menu-item"><a onClick={() => navigate('/summit')}>🏪 Upload Monthly Summit File</a></li>
             <li className="menu-item"><a onClick={() => navigate('/monthly-promo-plan')}>🏷️ Upload Monthly Promo Plan File</a></li>
