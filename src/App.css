@@ -242,12 +242,24 @@
   gap: 1rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
 }
 
-.file-card:hover {
+.file-card:hover:not(.disabled) {
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border-color: #008060;
+}
+
+.file-card.disabled {
+  opacity: 0.5;
+  background: linear-gradient(145deg, #f5f5f5, #e9ecef);
+  pointer-events: none;
+}
+
+.file-card.completed {
+  background: linear-gradient(145deg, #d4edda, #c3e6cb);
+  border-color: #28a745;
 }
 
 .file-card-icon {
@@ -271,6 +283,44 @@
   line-height: 1.4;
 }
 
+.step-number {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #112145;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 20px;
+}
+
+.completed-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.check-icon {
+  font-size: 1.5rem;
+  background: white;
+  color: #28a745;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
 .file-label-card {
   display: flex;
   align-items: center;
@@ -287,10 +337,16 @@
   font-size: 0.95rem;
 }
 
-.file-label-card:hover {
+.file-label-card:hover:not(.disabled) {
   background-color: #e9ecef;
   border-color: #008060;
   color: #112145;
+}
+
+.file-label-card.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #e9ecef;
 }
 
 .file-icon {
