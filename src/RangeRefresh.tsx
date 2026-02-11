@@ -155,7 +155,7 @@ function RangeRefresh() {
 
             {blueYonderFile && (
               <button
-                onClick={() => handleUpload(blueYonderFile, 'blue_yonda_range-test.csv', 'blueYonder')}
+                onClick={() => handleUpload(blueYonderFile, 'blue_yonda_range.csv', 'blueYonder')}
                 className="upload-button-card"
                 disabled={uploading.blueYonder}
               >
@@ -193,7 +193,7 @@ function RangeRefresh() {
 
             {ecommerceFile && (
               <button
-                onClick={() => handleUpload(ecommerceFile, 'ecommerce_file-test.csv', 'ecommerce')}
+                onClick={() => handleUpload(ecommerceFile, 'ecommerce_file.csv', 'ecommerce')}
                 className="upload-button-card"
                 disabled={uploading.ecommerce}
               >
@@ -231,7 +231,7 @@ function RangeRefresh() {
 
             {salesOrderFile && (
               <button
-                onClick={() => handleUpload(salesOrderFile, 'sevs_sales_orders-test.csv', 'salesOrder')}
+                onClick={() => handleUpload(salesOrderFile, 'sevs_sales_orders.csv', 'salesOrder')}
                 className="upload-button-card"
                 disabled={uploading.salesOrder}
               >
