@@ -5,6 +5,7 @@ import App from './App';
 import BonusBuy from './BonusBuy';
 import Summit from './Summit';
 import MonthlyPromoPlan from './MonthlyPromoPlan';
+import RangeRefresh from './RangeRefresh';
 import ErrorBoundary from './ErrorBoundary';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -21,6 +22,7 @@ root.render(
           <Route path="/bonus-buy" element={<BonusBuy />} />
           <Route path="/summit" element={<Summit />} />
           <Route path="/monthly-promo-plan" element={<MonthlyPromoPlan />} />
+          <Route path="/range-refresh" element={<RangeRefresh />} />
         </Routes>
       </BrowserRouter>
     </ErrorBoundary>
